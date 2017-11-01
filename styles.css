@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  background: url("images/bg_body.gif") top repeat;
+  padding-bottom: 36px;
+}
+
+header nav {
+  padding: 25px;
+}
+
+header, main, footer {
+  font: normal 20px 'Nunito', Helvetica, Arial, sans-serif;
+  min-width: 150px;
+}
+
+header nav a {
+  color: #cacaca;
+  text-decoration: none;
+  font: normal 24px 'Nunito', Helvetica, Arial, sans-serif;
+  padding-right: 89px;
+}
+
+@media only screen and (max-width: 530px) {
+  header nav a {
+    display: block;
+    padding-right: 0;
+  }
+
+  header nav {
+    margin-top: -65px;
+  }
+
+  h2::before, h2::after {
+    content: none;
+    
+  }
+}
+
+a.last {
+  padding-right: 0;
+}
+
+header h1 {
+  padding: 75px 0;
+}
+
+main {
+  text-align: center;
+  font: normal 20px 'Nunito', Helvetica, Arial, sans-serif;
+  color: #45494d;
+  padding: 75px;
+}
+
+article {
+  padding: 0 0 75px 0;
+}
+
+.active {
+  color: #6db9ff;
+  font-weight: bold;
+}
+main article h2::before, main article h2::after {
+  display: inline-block;
+  content: ' ';
+  background-color: #45494d;
+  width: 8px;
+  height: 8px;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin: 0 26px;
+}
+
+main article h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #45494d;
+  padding: 25px 0 40px 0;
+
+}
+
+main article h3 {
+  color: #3e59b2;
+  font-size: 24px;
+  padding-bottom: 25px;
+}
+
+main article p {
+  margin: auto;
+  max-width: 775px;
+}
+
+article:last-child {
+  padding-bottom: 0;
+  margin-bottom: 25px;
+}
+
+footer {
+  text-align: center;
+  padding: 75px 0 50px 0;
+  background-color: #e7e7e7;
+  color: #b2b2b2;
+}
+
+footer p {
+  margin: 0 auto;
+  max-width: 550px;
+
+}
+
+footer  p + p {
+  padding-bottom: 5px;
+}
+
+footer nav {
+  padding: 25px;
+  max-width: 750px;
+  margin: 10px auto 0 auto;
+}
+
+footer nav ul {
+  display: flex;
+  flex: row nowrap;
+  justify-content: center;
+  margin: auto;
+}
+
+footer nav ul li {
+  flex: auto;
+  margin: auto;
+}
+
+.footer_nav::before {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  content: " ";
+  background: transparent url("images/icons_social-media.png") 0 0 no-repeat;
+}
+
+#facebook::before {
+  background-position: 0 -46px;
+}
+
+#email::before {
+  background-position: 0 -92px;
+}
+
+#instagram::before {
+  background-position: 0 -138px;
+}
