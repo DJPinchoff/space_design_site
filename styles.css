@@ -34,9 +34,8 @@ header nav a {
     margin-top: -65px;
   }
 
-  h2::before, h2::after {
+  main article h2::before {
     content: none;
-    
   }
 }
 
