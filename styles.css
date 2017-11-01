@@ -14,7 +14,6 @@ header nav {
 
 header, main, footer {
   font: normal 20px 'Nunito', Helvetica, Arial, sans-serif;
-  min-width: 150px;
 }
 
 header nav a {
@@ -24,22 +23,7 @@ header nav a {
   padding-right: 89px;
 }
 
-@media only screen and (max-width: 530px) {
-  header nav a {
-    display: block;
-    padding-right: 0;
-  }
-
-  header nav {
-    margin-top: -65px;
-  }
-
-  main article h2::before {
-    content: none;
-  }
-}
-
-a.last {
+.last {
   padding-right: 0;
 }
 
@@ -84,7 +68,7 @@ main article h2 {
 main article h3 {
   color: #3e59b2;
   font-size: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 main article p {
@@ -92,9 +76,37 @@ main article p {
   max-width: 775px;
 }
 
+main article img {
+  width: 100%;
+  height: auto;
+  padding: 25px 0;
+}
+
+main article + img {
+  padding-top: 100px;
+}
+
 article:last-child {
   padding-bottom: 0;
   margin-bottom: 25px;
+}
+
+main article dl {
+  padding-right: 65px;
+}
+
+main article dl img {
+  padding: 0 0 12px 0;
+}
+
+main article div {
+  padding: 100px 0 125px 0;
+}
+
+main article div a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #3e59b2;
 }
 
 footer {
@@ -120,7 +132,7 @@ footer nav {
   margin: 10px auto 0 auto;
 }
 
-footer nav ul {
+.container, footer nav ul {
   display: flex;
   flex: row nowrap;
   justify-content: center;
@@ -150,4 +162,19 @@ footer nav ul li {
 
 #instagram::before {
   background-position: 0 -138px;
+}
+
+@media only screen and (max-width: 530px) {
+  header nav a {
+    display: block;
+    padding-right: 0;
+  }
+
+  header nav {
+    margin-top: -65px;
+  }
+
+  main article h2::before, main article h2::after {
+    content: none;
+  }
 }
