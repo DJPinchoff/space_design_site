@@ -44,7 +44,7 @@ article {
 
 .active {
   color: #6db9ff;
-  font-weight: bold;
+  font-weight: 600;
 }
 main article h2::before, main article h2::after {
   display: inline-block;
@@ -52,7 +52,7 @@ main article h2::before, main article h2::after {
   background-color: #45494d;
   width: 8px;
   height: 8px;
-  vertical-align: middle;
+  vertical-align: 7px;
   border-radius: 50%;
   margin: 0 26px;
 }
@@ -77,7 +77,10 @@ main article p {
 }
 
 main article img {
+  display: block;
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   height: auto;
   padding: 25px 0;
 }
@@ -91,22 +94,20 @@ article:last-child {
   margin-bottom: 25px;
 }
 
-main article dl {
-  padding-right: 65px;
-}
-
 main article dl img {
   padding: 0 0 12px 0;
 }
 
 main article div {
   padding: 100px 0 125px 0;
+  display: flex;
 }
 
 main article div a {
   text-decoration: none;
   font-size: 24px;
   color: #3e59b2;
+  margin: 0 auto;
 }
 
 footer {
@@ -132,7 +133,7 @@ footer nav {
   margin: 10px auto 0 auto;
 }
 
-.container, footer nav ul {
+footer nav ul {
   display: flex;
   flex: row nowrap;
   justify-content: center;
@@ -164,6 +165,21 @@ footer nav ul li {
   background-position: 0 -138px;
 }
 
+@media only screen and (max-width: 775px) {
+  main article div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  main article div a {
+    padding-top: 25px;
+  }
+
+  div.container {
+    padding: 75px 0 0 0;
+  }
+}
+
 @media only screen and (max-width: 530px) {
   header nav a {
     display: block;
@@ -176,5 +192,9 @@ footer nav ul li {
 
   main article h2::before, main article h2::after {
     content: none;
+  }
+
+  main article div a {
+    font-size: 18px;
   }
 }
